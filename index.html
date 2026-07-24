@@ -7,6 +7,10 @@
 <meta name="description" content="Mateus Aguiar — Personal Trainer e Consultoria. Planos de treino personalizados, acompanhamento presencial e online. Comece hoje sua transformação.">
 <meta name="theme-color" content="#000000">
 
+<!-- Segurança: todo o conteúdo é local; bloqueia scripts/recursos externos -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <!-- Open Graph -->
 <meta property="og:title" content="Mateus Aguiar | Personal Trainer & Consultoria">
 <meta property="og:description" content="Planos de treino personalizados, acompanhamento presencial e online. Comece sua transformação.">
@@ -231,26 +235,40 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width:900px){
-    .hero{grid-template-columns:1fr;min-height:auto}
+    .nav{height:88px}
+    .logo-circle{--sz:72px}
+    .hero{grid-template-columns:1fr;min-height:auto;padding-top:88px}
     .hero-copy{padding:40px clamp(22px,5vw,48px) 60px}
-    .hero-media{min-height:60vh;order:-1}
+    .hero-media{min-height:58vh;order:-1}
     .about{grid-template-columns:1fr;gap:36px}
     .about-media{max-width:360px;margin:0 auto}
     .plans{grid-template-columns:1fr;max-width:440px;margin:0 auto}
     .plan.featured{transform:none}
     .plan.featured:hover{transform:translateY(-6px)}
     .nav-links{
-      position:fixed;top:124px;left:0;right:0;background:#fff;flex-direction:column;
+      position:fixed;top:88px;left:0;right:0;background:#fff;flex-direction:column;
       padding:24px;gap:20px;border-bottom:1px solid var(--gray-light);
-      transform:translateY(-140%);transition:transform .35s ease;box-shadow:0 20px 40px rgba(0,0,0,.08);
+      transform:translateY(-160%);visibility:hidden;
+      transition:transform .35s ease, visibility .35s ease;box-shadow:0 20px 40px rgba(0,0,0,.08);
     }
-    .nav-links.open{transform:translateY(0)}
+    .nav-links.open{transform:translateY(0);visibility:visible}
     .burger{display:flex}
   }
   @media (max-width:520px){
     section{padding:64px 0}
     .cta-box{padding:50px 24px}
     .hero-stats{gap:26px}
+    .hero h1{font-size:clamp(2.2rem,8.5vw,3rem)}
+    .sec-head h2{font-size:clamp(1.7rem,7vw,2.3rem)}
+    .about h2,.cta-box h2{font-size:clamp(1.7rem,7vw,2.3rem)}
+    .eyebrow{letter-spacing:.14em;font-size:.72rem}
+    .plan .price{font-size:2.5rem}
+  }
+  @media (max-width:360px){
+    .wrap{padding:0 16px}
+    .hero-stats{gap:18px}
+    .hero-stats div b{font-size:1.6rem}
+    .plan{padding:32px 22px}
   }
 </style>
 </head>

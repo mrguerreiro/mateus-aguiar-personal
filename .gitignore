@@ -1,0 +1,9 @@
+# Arquivos temporários de captura de tela
+.shot*.html
+.diag*.html
+docs/screenshots/_*.png
+
+# Sistema
+Thumbs.db
+.DS_Store
+desktop.ini
