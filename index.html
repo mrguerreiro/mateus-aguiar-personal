@@ -141,21 +141,32 @@
   .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:16px}
   .sec-head p{color:var(--gray);font-size:1.08rem}
 
-  /* ---------- Services ---------- */
-  #servicos{background:var(--gray-soft)}
-  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-  .svc-card{
-    background:#fff;border:1px solid var(--gray-light);border-radius:18px;padding:34px 28px;
-    transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+  /* ---------- Como Funciona (passos) ---------- */
+  #como-funciona{background:var(--gray-soft)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{
+    position:relative;background:#fff;border:1px solid var(--gray-light);border-radius:18px;
+    padding:38px 30px 32px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
   }
-  .svc-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.09);border-color:#000}
-  .svc-ic{
-    width:58px;height:58px;border-radius:14px;background:var(--black);
-    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  .step:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.09);border-color:#000}
+  .step-num{
+    display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;
+    border-radius:14px;background:var(--black);color:#fff;font-weight:900;font-size:1.3rem;margin-bottom:20px;
   }
-  .svc-ic svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .svc-card h3{font-size:1.18rem;margin-bottom:8px;letter-spacing:-.01em}
-  .svc-card p{font-size:.95rem;color:var(--gray)}
+  .step h3{font-size:1.22rem;margin-bottom:10px;letter-spacing:-.01em}
+  .step p{font-size:.96rem;color:var(--gray)}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .faq-item{border:1px solid var(--gray-light);border-radius:14px;background:#fff;overflow:hidden}
+  .faq-item summary{
+    cursor:pointer;list-style:none;padding:22px 26px;font-weight:800;font-size:1.05rem;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:"+";font-size:1.7rem;font-weight:400;color:var(--gray);line-height:1}
+  .faq-item[open] summary::after{content:"–"}
+  .faq-item p{padding:0 26px 24px;color:var(--gray);margin:0;font-size:.98rem}
 
   /* ---------- Plans ---------- */
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
@@ -256,6 +267,7 @@
     .hero-media{min-height:58vh;order:-1}
     .about{grid-template-columns:1fr;gap:36px}
     .about-media{max-width:360px;margin:0 auto}
+    .steps{grid-template-columns:1fr;max-width:440px;margin:0 auto}
     .plans{grid-template-columns:1fr;max-width:440px;margin:0 auto}
     .plan.featured{transform:none}
     .plan.featured:hover{transform:translateY(-6px)}
@@ -319,9 +331,10 @@
       <span class="logo-circle"><img src="assets/logo.jpeg" alt="Mateus Aguiar — Personal / Consultoria"></span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
-      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como Funciona</a>
       <a href="#planos">Planos</a>
       <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
       <a class="btn btn-wa nav-cta" href="https://wa.me/5514998017399?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20dos%20planos%20e%20servi%C3%A7os." target="_blank" rel="noopener" data-wa>Fale comigo</a>
     </nav>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
@@ -362,44 +375,29 @@
   </div>
 </section>
 
-<!-- ============ SERVIÇOS ============ -->
-<section id="servicos">
+<!-- ============ COMO FUNCIONA ============ -->
+<section id="como-funciona">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">O que eu ofereço</span>
-      <h2>Serviços completos pra sua evolução</h2>
-      <p>Do plano de treino ao acompanhamento presencial — tudo pensado pro seu objetivo.</p>
+      <span class="eyebrow">Como funciona</span>
+      <h2>Seu acompanhamento em 3 passos</h2>
+      <p>Simples e direto, do primeiro contato à sua evolução contínua.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div>
-        <h3>Consultoria Online</h3>
-        <p>Plano de treino personalizado entregue direto no seu celular, onde você estiver.</p>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-num">01</span>
+        <h3>Anamnese Completa</h3>
+        <p>Entendo sua rotina, histórico e objetivos através de um formulário detalhado.</p>
       </div>
-      <div class="svc-card reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12l3-3"/><path d="M9 3h6"/></svg></div>
-        <h3>Personal Presencial</h3>
-        <p>Aula 1-on-1 com correção de execução em tempo real e intensidade sob medida.</p>
+      <div class="step reveal">
+        <span class="step-num">02</span>
+        <h3>Treino no App</h3>
+        <p>Elaboro sua estratégia personalizada e libero a ficha técnica com vídeos diretamente no nosso aplicativo de treino.</p>
       </div>
-      <div class="svc-card reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20V7"/></svg></div>
-        <h3>Avaliação Física</h3>
-        <p>Diagnóstico completo pra definir metas reais e medir seu progresso com dados.</p>
-      </div>
-      <div class="svc-card reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M6 12a6 6 0 0 1 12 0"/><path d="M4 12h16"/><path d="M8 12v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-5"/></svg></div>
-        <h3>Correções de Treino</h3>
-        <p>Envie seus vídeos e receba ajustes de técnica pra treinar seguro e render mais.</p>
-      </div>
-      <div class="svc-card reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="M8 2v4M16 2v4"/><path d="M9 16l2 2 4-4"/></svg></div>
-        <h3>Check-ins Semanais</h3>
-        <p>Acompanhamento constante pra manter a consistência e ajustar a rota toda semana.</p>
-      </div>
-      <div class="svc-card reveal">
-        <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
-        <h3>Suporte Próximo</h3>
-        <p>Tire dúvidas e receba motivação direto no WhatsApp. Você nunca treina sozinho.</p>
+      <div class="step reveal">
+        <span class="step-num">03</span>
+        <h3>Check-in e Acompanhamento</h3>
+        <p>Analiso sua evolução e métricas para realizar ajustes contínuos, garantindo que você nunca estagne.</p>
       </div>
     </div>
   </div>
@@ -466,17 +464,40 @@
       <div class="reveal">
         <span class="eyebrow" style="color:#888">Quem é</span>
         <h2>Mateus Aguiar</h2>
-        <p>Personal trainer dedicado a transformar treino em resultado real. Meu trabalho é
-          entender o seu objetivo, montar uma estratégia sob medida e caminhar junto com você
-          em cada etapa — sem fórmula pronta.</p>
-        <p>Seja no presencial ou na consultoria online, o foco é sempre o mesmo: consistência,
-          técnica correta e progresso que você consegue enxergar semana após semana.</p>
+        <p>Tenho 31 anos, sou Cristão e apaixonado por atividade física. Ex-atleta profissional, vivo a rotina do esporte na pele e trabalho com musculação há mais de 7 anos.
+Minha missão como seu Personal Trainer é transformar a sua rotina através de um acompanhamento 100% individualizado, eficiente e seguro. Acredito na força da consistência, no respeito à sua rotina e na entrega de resultados reais, sem fórmulas mágicas.
+Seja para emagrecer, ganhar massa muscular ou melhorar sua qualidade de vida, estamos juntos nessa jornada. Afinal, o básico bem-feito é o que funciona</p>
+        
         <div class="creds">
           <span><svg viewBox="0 0 24 24"><use href="#check-w"/></svg> Treino presencial &amp; online</span>
           <span><svg viewBox="0 0 24 24"><use href="#check-w"/></svg> Planos individualizados</span>
           <span><svg viewBox="0 0 24 24"><use href="#check-w"/></svg> Acompanhamento próximo</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Ainda com dúvidas?</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Preciso ter experiência?</summary>
+        <p>Não! Todos os treinos respeitam o seu nível atual.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Serve para quem treina em casa ou condomínio?</summary>
+        <p>Com certeza. O treino é adaptado para os equipamentos que você tem disponíveis.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Como acesso meus treinos?</summary>
+        <p>Através do nosso aplicativo de treino exclusivo, com vídeos e registro de cargas.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -503,9 +524,10 @@
       <span class="logo-circle sm"><img src="assets/logo.jpeg" alt="Mateus Aguiar — Personal / Consultoria"></span>
     </a>
     <div class="foot-links">
-      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como Funciona</a>
       <a href="#planos">Planos</a>
       <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
       <a href="https://wa.me/5514998017399?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20dos%20planos%20e%20servi%C3%A7os." target="_blank" rel="noopener" data-wa>WhatsApp</a>
     </div>
     <small>© <span id="year"></span> Mateus Aguiar · Personal / Consultoria</small>

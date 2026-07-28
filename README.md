@@ -36,6 +36,7 @@ Este projeto foi construído com **cuidado de produção**, não apenas "um site
 ### 🛡️ Robustez & Progressive Enhancement
 - **Funciona mesmo sem JavaScript** — o conteúdo é sempre visível; as animações são um *enhancement* opcional (ativadas via classe `.js`).
 - **Links de WhatsApp reais no HTML** — o CTA principal funciona mesmo se o JS falhar; o script apenas personaliza a mensagem por plano.
+- **FAQ com `<details>` nativo** — abre e fecha sem uma linha de JavaScript.
 - Respeita **`prefers-reduced-motion`** — desativa animações para quem tem sensibilidade a movimento.
 
 ### ♿ Acessibilidade (WCAG AA)
@@ -75,7 +76,7 @@ Este projeto foi construído com **cuidado de produção**, não apenas "um site
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/screenshots/desktop-servicos.png" alt="Serviços"></td>
+    <td width="50%"><img src="docs/screenshots/desktop-como.png" alt="Como Funciona"></td>
     <td width="50%"><img src="docs/screenshots/desktop-planos.png" alt="Planos"></td>
   </tr>
 </table>
