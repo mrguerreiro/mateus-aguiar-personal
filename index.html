@@ -141,6 +141,23 @@
   .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:16px}
   .sec-head p{color:var(--gray);font-size:1.08rem}
 
+  /* ---------- Services (O que eu ofereço) ---------- */
+  #servicos{background:#fff}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .svc-card{
+    background:#fff;border:1px solid var(--gray-light);border-radius:18px;padding:34px 28px;
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+  }
+  .svc-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.09);border-color:#000}
+  .svc-ic{
+    width:58px;height:58px;border-radius:14px;background:var(--black);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .svc-ic svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .svc-card h3{font-size:1.18rem;margin-bottom:8px;letter-spacing:-.01em}
+  .svc-card p{font-size:.95rem;color:var(--gray)}
+
   /* ---------- Como Funciona (passos) ---------- */
   #como-funciona{background:var(--gray-soft)}
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -331,6 +348,7 @@
       <span class="logo-circle"><img src="assets/logo.jpeg" alt="Mateus Aguiar — Personal / Consultoria"></span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como Funciona</a>
       <a href="#planos">Planos</a>
       <a href="#sobre">Sobre</a>
@@ -371,6 +389,49 @@
     <div class="photo-placeholder" id="heroPh">
       <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#lifter"/></svg>
       <small>Adicione a foto do Mateus em <b>assets/mateus.jpg</b></small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">O que eu ofereço</span>
+      <h2>Serviços completos pra sua evolução</h2>
+      <p>Do plano de treino ao acompanhamento presencial — tudo pensado pro seu objetivo.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div>
+        <h3>Consultoria Online</h3>
+        <p>Plano de treino personalizado entregue direto no seu celular, onde você estiver.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12l3-3"/><path d="M9 3h6"/></svg></div>
+        <h3>Personal Presencial</h3>
+        <p>Aula 1-on-1 com correção de execução em tempo real e intensidade sob medida.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20V7"/></svg></div>
+        <h3>Avaliação Física</h3>
+        <p>Diagnóstico completo pra definir metas reais e medir seu progresso com dados.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M6 12a6 6 0 0 1 12 0"/><path d="M4 12h16"/><path d="M8 12v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-5"/></svg></div>
+        <h3>Correções de Treino</h3>
+        <p>Envie seus vídeos e receba ajustes de técnica pra treinar seguro e render mais.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="M8 2v4M16 2v4"/><path d="M9 16l2 2 4-4"/></svg></div>
+        <h3>Check-ins Semanais</h3>
+        <p>Acompanhamento constante pra manter a consistência e ajustar a rota toda semana.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+        <h3>Suporte Próximo</h3>
+        <p>Tire dúvidas e receba motivação direto no WhatsApp. Você nunca treina sozinho.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -524,6 +585,7 @@ Seja para emagrecer, ganhar massa muscular ou melhorar sua qualidade de vida, es
       <span class="logo-circle sm"><img src="assets/logo.jpeg" alt="Mateus Aguiar — Personal / Consultoria"></span>
     </a>
     <div class="foot-links">
+      <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como Funciona</a>
       <a href="#planos">Planos</a>
       <a href="#sobre">Sobre</a>
