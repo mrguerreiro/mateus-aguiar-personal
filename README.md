@@ -7,7 +7,7 @@
 **Landing page institucional de alta conversão para um personal trainer** — construída do zero em HTML, CSS e JavaScript puro, sem frameworks nem dependências.
 
 [![Site no ar](https://img.shields.io/badge/🌐_Ver_site-online-25D366?style=for-the-badge)](https://mrguerreiro.github.io/mateus-aguiar-personal/)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-(14)_99801--7399-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5514998017399)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-(14)_99701--7399-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5514997017399)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -146,8 +146,8 @@ O GitHub Pages reconstrói o site automaticamente em ~1 minuto.
 
 <div align="center">
 
-[![Falar no WhatsApp](https://img.shields.io/badge/💬_Fale_com_o_Mateus-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5514998017399?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20dos%20planos%20e%20servi%C3%A7os.)
+[![Falar no WhatsApp](https://img.shields.io/badge/💬_Fale_com_o_Mateus-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5514997017399?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20dos%20planos%20e%20servi%C3%A7os.)
 
-**(14) 99801-7399**
+**(14) 99701-7399**
 
 </div>
