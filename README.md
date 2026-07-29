@@ -76,8 +76,12 @@ Este projeto foi construído com **cuidado de produção**, não apenas "um site
 
 <table>
   <tr>
+    <td width="50%"><img src="docs/screenshots/desktop-servicos.png" alt="Serviços"></td>
     <td width="50%"><img src="docs/screenshots/desktop-como.png" alt="Como Funciona"></td>
+  </tr>
+  <tr>
     <td width="50%"><img src="docs/screenshots/desktop-planos.png" alt="Planos"></td>
+    <td width="50%"><img src="docs/screenshots/desktop-faq.png" alt="FAQ"></td>
   </tr>
 </table>
 
